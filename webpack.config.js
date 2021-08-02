@@ -10,11 +10,11 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
-    port:3000
+    port: 3000,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
     }),
   ],
   module: {
