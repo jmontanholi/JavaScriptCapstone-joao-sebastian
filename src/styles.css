@@ -125,9 +125,8 @@ body {
 }
 
 .submit-btn {
-  margin: auto;
   width: 25%;
-  margin: 15px auto 20px ;
+  margin: 15px auto 20px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.699);
   background-color: rgba(0, 0, 0, 0.144);
