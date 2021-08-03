@@ -1,4 +1,4 @@
-import getItem from './request.js';
+import getItem, { getComments } from './request.js';
 
 const modalDiv = document.getElementById('modalDiv');
 
@@ -85,19 +85,25 @@ const createModal = async (id) => {
 
   const modalCommentList = document.createElement('div');
   modalCommentList.classList.add('modal-comment-list');
-  modalCommentList.innerHTML = `<p class="comments">João: This is great</p>
-  <p class="comments">Marcia: Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, facere.</p>
-  <p class="comments">Pedro: Where do I buy the last ingredient?</p>
-  <p class="comments">Lorem: ipsum</p>
-  <p class="comments">João: This is great</p>
-  <p class="comments">Marcia: Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, facere.</p>
-  <p class="comments">Pedro: Where do I buy the last ingredient?</p>
-  <p class="comments">Lorem: ipsum</p>
-  <p class="comments">João: This is great</p>
-  <p class="comments">Marcia: Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, facere.</p>
-  <p class="comments">Pedro: Where do I buy the last ingredient?</p>
-  <p class="comments">Lorem: ipsum</p>`;
   modalCommentsDiv.append(modalCommentList);
+
+  const createComments = async () => {
+    const comments = await getComments(id);
+    if (comments.error) {
+      const error = document.createElement('p');
+      error.innerHTML = 'No comments';
+      error.classList.add('comments');
+      modalCommentList.appendChild(error);
+    } else {
+      comments.forEach((e) => {
+        const p = document.createElement('p');
+        p.classList.add('comments');
+        p.innerHTML = `${e.username}: ${e.comment}`;
+        modalCommentList.appendChild(p);
+      });
+    }
+  };
+  createComments();
 
   const modalCommentForm = document.createElement('div');
   modalCommentForm.classList.add('modal-comment');
@@ -126,6 +132,25 @@ const createModal = async (id) => {
   submitBtn.setAttribute('value', 'Submit');
   submitBtn.classList.add('submit-btn');
   modalCommentForm.appendChild(submitBtn);
+
+  submitBtn.addEventListener('click', async () => {
+    const postComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/J8Ya3HGGvBBaT8zGxBGx/comments';
+    await fetch(postComments, {
+      method: 'POST',
+      body: JSON.stringify({
+        item_id: id,
+        username: nameInput.value,
+        comment: commentInput.value,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+    modalCommentList.innerHTML = '';
+    createComments();
+    nameInput.value = '';
+    commentInput.value = '';
+  });
 };
 
 export { createModal as default };

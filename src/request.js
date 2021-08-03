@@ -5,4 +5,11 @@ const getItem = async (id) => {
   return parsed.meals[0];
 };
 
-export { getItem as default };
+const getComments = async (id) => {
+  const comments = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/J8Ya3HGGvBBaT8zGxBGx/comments?item_id=${id}`;
+  const response = await fetch(comments);
+  const result = await response.json();
+  return result;
+};
+
+export { getItem as default, getComments };
