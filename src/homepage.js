@@ -1,6 +1,18 @@
 import createList from './requests.js';
 
 const listContainer = document.getElementById('homepageList');
+const APIUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/J8Ya3HGGvBBaT8zGxBGx/likes';
+
+const getLikes = async (id) => {
+  const likesList = await fetch(APIUrl);
+  const likesObject = await likesList.json();
+  for (let j = 0; j < likesObject.length; j += 1) {
+    if (likesObject[j].item_id === Number(id)) {
+      return likesObject[j].likes;
+    }
+  }
+  return 0;
+};
 
 const populateList = async () => {
   const itemList = await createList();
@@ -20,7 +32,9 @@ const populateList = async () => {
     listH5.innerText = itemList[i].strMeal;
     listInnerDiv.appendChild(listH5);
     const listP = document.createElement('p');
-    listP.innerText = '3 likes';
+    getLikes(itemList[i].idMeal).then((likesCount) => {
+      listP.innerText = `${likesCount} likes`;
+    });
     listP.classList.add('card-text');
     listInnerDiv.appendChild(listP);
     const listBtn = document.createElement('a');
