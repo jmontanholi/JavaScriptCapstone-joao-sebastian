@@ -3,12 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import createModal from './modalCreation.js';
 
 const commentBtnEvent = () => {
-  const commentBtns = document.getElementsByClassName('commentBtn');
-  for (let i = 0; i < commentBtns.length; i += 1) {
-    commentBtns[i].addEventListener('click', () => {
-      createModal(commentBtns[i].id);
+  const commentBtns = document.querySelectorAll('.commentBtn');
+  commentBtns.forEach((e) => {
+    e.addEventListener('click', () => {
+      createModal(e.id);
     });
-  }
+  });
 };
 
-window.onload(commentBtnEvent());
+commentBtnEvent();
