@@ -126,6 +126,21 @@ const createModal = async (id) => {
   submitBtn.setAttribute('value', 'Submit');
   submitBtn.classList.add('submit-btn');
   modalCommentForm.appendChild(submitBtn);
+
+  submitBtn.addEventListener('click', () => {
+    const postComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/J8Ya3HGGvBBaT8zGxBGx/comments';
+    fetch(postComments, {
+      method: 'POST',
+      body: JSON.stringify({
+        item_id: id,
+        username: nameInput.value,
+        comment: commentInput.value,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+  });
 };
 
 export { createModal as default };
