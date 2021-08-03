@@ -26,7 +26,6 @@ const populateList = async () => {
     const listBtn = document.createElement('a');
     listBtn.classList.add('btn', 'btn-secondary', 'commentBtn');
     listBtn.setAttribute('id', itemList[i].idMeal);
-    listBtn.setAttribute('href', '#');
     listBtn.innerText = 'Comment';
     listInnerDiv.appendChild(listBtn);
   }

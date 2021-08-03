@@ -1,12 +1,10 @@
 import getItem from './request.js';
 
 const modalDiv = document.getElementById('modalDiv');
-const body = document.getElementById('body');
 
 const createModal = async (id) => {
   modalDiv.classList.remove('my-modal-none');
   modalDiv.classList.add('my-modal');
-  body.classList.add('body-hidden');
 
   const foodObject = await getItem(id);
   const image = foodObject.strMealThumb;
@@ -30,7 +28,6 @@ const createModal = async (id) => {
     modalDiv.classList.add('my-modal-none');
     modalDiv.classList.remove('my-modal');
     modalDiv.innerHTML = '';
-    body.classList.remove('body-hidden');
   });
 
   const modalImgDiv = document.createElement('div');
@@ -49,6 +46,7 @@ const createModal = async (id) => {
 
   const foodTitle = document.createElement('h2');
   foodTitle.classList.add('roboto-font');
+  foodTitle.classList.add('food-title');
   foodTitle.innerHTML = foodName;
   foodNameDiv.appendChild(foodTitle);
 
