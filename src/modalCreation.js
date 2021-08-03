@@ -17,6 +17,7 @@ const createModal = async (id) => {
       ingredients.push(foodObject[`strIngredient${i}`]);
     }
   }
+
   const modalContent = document.createElement('div');
   modalContent.classList.add('my-modal-content');
   modalDiv.appendChild(modalContent);
