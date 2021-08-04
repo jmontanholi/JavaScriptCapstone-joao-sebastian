@@ -14,6 +14,27 @@ const getLikes = async (id) => {
   return 0;
 };
 
+const addLikes = async () => {
+  const likeBtn = document.querySelectorAll('.likeBtn');
+  likeBtn.forEach((e) => {
+    e.addEventListener('click', async () => {
+      await fetch(APIUrl, {
+        method: 'POST',
+        body: JSON.stringify({
+          item_id: Number(e.id),
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      });
+      const newLikesP = document.getElementById(e.id);
+      getLikes(e.id).then((likesCount) => {
+        newLikesP.innerHTML = `${likesCount} likes <a class="likeBtn" id="${e.id}"><i class="far fa-thumbs-up"></i></a>`;
+      });
+    });
+  });
+};
+
 const populateList = async () => {
   const itemList = await createList();
   for (let i = 0; i < itemList.length; i += 1) {
@@ -32,8 +53,10 @@ const populateList = async () => {
     listH5.innerText = itemList[i].strMeal;
     listInnerDiv.appendChild(listH5);
     const listP = document.createElement('p');
-    getLikes(itemList[i].idMeal).then((likesCount) => {
-      listP.innerText = `${likesCount} likes`;
+    listP.setAttribute('id', itemList[i].idMeal);
+    // eslint-disable-next-line no-await-in-loop
+    await getLikes(itemList[i].idMeal).then((likesCount) => {
+      listP.innerHTML = `${likesCount} likes <a class="likeBtn" id="${itemList[i].idMeal}"><i class="far fa-thumbs-up"></i></a>`;
     });
     listP.classList.add('card-text');
     listInnerDiv.appendChild(listP);
@@ -43,6 +66,7 @@ const populateList = async () => {
     listBtn.innerText = 'Comment';
     listInnerDiv.appendChild(listBtn);
   }
+  addLikes();
 };
 
 export default populateList;
