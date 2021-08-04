@@ -1,4 +1,4 @@
-import getItem, { getComments } from './request.js';
+import getItem, { commentCounter, getComments } from './request.js';
 
 const modalDiv = document.getElementById('modalDiv');
 
@@ -82,6 +82,17 @@ const createModal = async (id) => {
   commentTitle.classList.add('roboto-font');
   commentTitle.innerText = 'Comments';
   modalCommentsDiv.appendChild(commentTitle);
+
+  const createCommentsNumber = async () => {
+    const commentNumber = await commentCounter(id);
+    if (commentNumber === undefined) {
+      commentTitle.innerText = '0 Comments';
+    } else {
+      commentTitle.innerText = `${commentNumber} Comments`;
+    }
+  };
+
+  createCommentsNumber();
 
   const modalCommentList = document.createElement('div');
   modalCommentList.classList.add('modal-comment-list');
