@@ -12,4 +12,9 @@ const getComments = async (id) => {
   return result;
 };
 
-export { getItem as default, getComments };
+const commentCounter = async (id) => {
+  const commentList = await getComments(id);
+  return commentList.length;
+};
+
+export { getItem as default, getComments, commentCounter };
