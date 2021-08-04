@@ -18,7 +18,7 @@ In this website we are interacting with two different APIs not only to show the 
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://jmontanholi.github.io/JavaScriptCapstone-joao-sebastian/)
 
 
 ## Getting Started
