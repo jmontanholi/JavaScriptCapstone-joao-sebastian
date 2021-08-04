@@ -14,6 +14,14 @@ const getComments = async (id) => {
 
 const commentCounter = async (id) => {
   const commentList = await getComments(id);
+  if (commentList.length === undefined) {
+    return 0;
+  }
+
+  if (commentList === Error) {
+    return 0;
+  }
+
   return commentList.length;
 };
 

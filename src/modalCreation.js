@@ -1,4 +1,4 @@
-import getItem, { commentCounter, getComments } from './request.js';
+import getItem, { commentCounter, getComments } from './commentsRequest.js';
 
 const modalDiv = document.getElementById('modalDiv');
 
