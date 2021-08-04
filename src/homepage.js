@@ -1,4 +1,4 @@
-import createList from './requests.js';
+import createList from './homePageRequest.js';
 
 const listContainer = document.getElementById('homepageList');
 const APIUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/J8Ya3HGGvBBaT8zGxBGx/likes';
