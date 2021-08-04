@@ -1,13 +1,9 @@
 import createList from './homePageRequest.js';
+import displayCount from './itemscount.js';
 
 const listContainer = document.getElementById('homepageList');
 const APIUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/J8Ya3HGGvBBaT8zGxBGx/likes';
 let itemsCount = '';
-
-const displayCount = async () => {
-  const navLink = document.getElementById('navLink');
-  navLink.innerText = `All recipes (${itemsCount})`;
-};
 
 const getLikes = async (id) => {
   const likesList = await fetch(APIUrl);
@@ -74,7 +70,7 @@ const populateList = async () => {
     listInnerDiv.appendChild(listBtn);
   }
   addLikes();
-  displayCount();
+  displayCount(itemsCount);
 };
 
 export default populateList;
