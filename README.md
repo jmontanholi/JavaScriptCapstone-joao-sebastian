@@ -59,10 +59,9 @@ To run the tests you just need to run this command ```npm test```
 
 👤 **Sebastian Muñoz**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
+- GitHub: [@smunozmo](https://github.com/smunozmo)
+- Twitter: [@smunozmo](https://twitter.com/smunozmo)
+- Linkedin: [Sebastián Muñoz](https://www.linkedin.com/in/smunozmo/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
