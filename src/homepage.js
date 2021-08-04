@@ -2,6 +2,12 @@ import createList from './homePageRequest.js';
 
 const listContainer = document.getElementById('homepageList');
 const APIUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/J8Ya3HGGvBBaT8zGxBGx/likes';
+let itemsCount = '';
+
+const displayCount = async () => {
+  const navLink = document.getElementById('navLink');
+  navLink.innerText = `All recipes (${itemsCount})`;
+};
 
 const getLikes = async (id) => {
   const likesList = await fetch(APIUrl);
@@ -37,6 +43,7 @@ const addLikes = async () => {
 
 const populateList = async () => {
   const itemList = await createList();
+  itemsCount = itemList.length;
   for (let i = 0; i < itemList.length; i += 1) {
     const listDiv = document.createElement('div');
     listDiv.classList.add('card', 'col-sm-3');
@@ -67,6 +74,7 @@ const populateList = async () => {
     listInnerDiv.appendChild(listBtn);
   }
   addLikes();
+  displayCount();
 };
 
 export default populateList;
