@@ -20,6 +20,9 @@ In this website we are interacting with two different APIs not only to show the 
 
 [Live Demo Link](https://jmontanholi.github.io/JavaScriptCapstone-joao-sebastian/)
 
+## Project Video Presentation
+
+You can check out our video presentation for the project [here](https://www.loom.com/share/0e96cd8331524739814b55528504a1aa)
 
 ## Getting Started
 
