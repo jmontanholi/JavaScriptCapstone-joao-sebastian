@@ -1,4 +1,5 @@
 import './styles.css';
+import './queries.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import createModal from './modalCreation.js';
 import populateList from './homepage.js';

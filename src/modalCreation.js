@@ -1,6 +1,7 @@
 import getItem, { commentCounter, getComments } from './commentsRequest.js';
 
 const modalDiv = document.getElementById('modalDiv');
+const body = document.getElementById('body');
 
 const createCommentsNumber = async (domElement, id) => {
   const commentNumber = await commentCounter(id);
@@ -14,6 +15,7 @@ const createCommentsNumber = async (domElement, id) => {
 const createModal = async (id) => {
   modalDiv.classList.remove('my-modal-none');
   modalDiv.classList.add('my-modal');
+  body.classList.add('no-overflow');
 
   const foodObject = await getItem(id);
   const image = foodObject.strMealThumb;
@@ -37,6 +39,7 @@ const createModal = async (id) => {
     modalDiv.classList.add('my-modal-none');
     modalDiv.classList.remove('my-modal');
     modalDiv.innerHTML = '';
+    body.classList.remove('no-overflow');
   });
 
   const modalImgDiv = document.createElement('div');

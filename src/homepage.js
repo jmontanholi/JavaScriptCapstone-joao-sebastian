@@ -49,7 +49,7 @@ const populateList = async () => {
     listImg.classList.add('card-img-top', 'pt-2');
     listDiv.appendChild(listImg);
     const listInnerDiv = document.createElement('div');
-    listInnerDiv.classList.add('card-body', 'mb-3');
+    listInnerDiv.classList.add('card-body', 'mb-3', 'd-flex', 'flex-column', 'justify-content-between');
     listDiv.appendChild(listInnerDiv);
     const listH5 = document.createElement('h5');
     listH5.classList.add('card-title');

@@ -4,11 +4,14 @@ html {
   margin: 0;
 }
 
+.no-overflow {
+  overflow: hidden;
+}
+
 .body {
   font-family: 'Comic Neue', cursive;
   font-weight: bold;
-  overflow-x: hidden;
-  background-color: #DECDF5;
+  background-color: lightblue;;
 }
 
 .card {
@@ -47,7 +50,7 @@ html {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  margin-bottom: 1000px;
+  margin-bottom: 5px;
 }
 
 .commentBtn:hover {
@@ -89,8 +92,8 @@ html {
 }
 
 .modal-img {
-  width: 400px;
-  height: 400px;
+  max-width: 400px;
+  max-height: 400px;
   margin-top: 15px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 1px rgba(241, 241, 241, 0.863);
@@ -212,7 +215,7 @@ html {
 }
 
 .link:hover {
-  color: #20ffa6!important;
+  color: rgb(143, 227, 255)!important;
 }
 
 .footer {

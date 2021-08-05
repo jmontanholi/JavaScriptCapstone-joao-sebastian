@@ -1,0 +1,124 @@
+@media (max-width: 2560px) {
+  .my-modal-content {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1800px) {
+  .my-modal-content {
+    width: 70%;
+  }
+
+  .modal-ingredients-div {
+    max-width: 450px;
+  }
+
+  .modal-comment-list-div {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .my-modal-content {
+    width: 80%;
+  }
+
+  .modal-ingredients-div {
+    max-width: 380px;
+  }
+
+  .modal-comment-list-div {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .my-modal-content {
+    width: 80%;
+  }
+
+  .modal-ingredients-div {
+    max-width: 350px;
+  }
+
+  .modal-comment-list-div {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 950px) {
+  .my-modal-content {
+    width: 80%;
+  }
+
+  .modal-ingredients-div {
+    max-width: 300px;
+  }
+
+  .modal-comment-list-div {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .my-modal-content {
+    width: 80%;
+  }
+
+  .modal-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-ingredients-div {
+    width: 300px;
+  }
+
+  .modal-comment-list-div {
+    width: 300px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .modal-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .submit-btn {
+    width: 100px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .my-modal-content {
+    width: 100%;
+  }
+
+  .modal-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .modal-ingredients-div {
+    width: 240px;
+  }
+
+  .modal-comment-list-div {
+    width: 240px;
+  }
+
+  .modal-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .submit-btn {
+    width: 100px;
+  }
+}
