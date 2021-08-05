@@ -88,7 +88,7 @@ const createModal = async (id) => {
   modalDetails.appendChild(modalCommentsDiv);
 
   const commentTitle = document.createElement('h4');
-  commentTitle.classList.add('roboto-font');
+  commentTitle.classList.add('roboto-font', 'comments-title');
   commentTitle.innerText = 'Comments';
   modalCommentsDiv.appendChild(commentTitle);
 
