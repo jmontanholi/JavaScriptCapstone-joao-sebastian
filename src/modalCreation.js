@@ -2,6 +2,15 @@ import getItem, { commentCounter, getComments } from './commentsRequest.js';
 
 const modalDiv = document.getElementById('modalDiv');
 
+const createCommentsNumber = async (domElement, id) => {
+  const commentNumber = await commentCounter(id);
+  if (commentNumber === undefined) {
+    domElement.innerText = '0 Comments';
+  } else {
+    domElement.innerText = `${commentNumber} Comments`;
+  }
+};
+
 const createModal = async (id) => {
   modalDiv.classList.remove('my-modal-none');
   modalDiv.classList.add('my-modal');
@@ -83,16 +92,7 @@ const createModal = async (id) => {
   commentTitle.innerText = 'Comments';
   modalCommentsDiv.appendChild(commentTitle);
 
-  const createCommentsNumber = async () => {
-    const commentNumber = await commentCounter(id);
-    if (commentNumber === undefined) {
-      commentTitle.innerText = '0 Comments';
-    } else {
-      commentTitle.innerText = `${commentNumber} Comments`;
-    }
-  };
-
-  createCommentsNumber();
+  createCommentsNumber(commentTitle, id);
 
   const modalCommentList = document.createElement('div');
   modalCommentList.classList.add('modal-comment-list');
@@ -159,6 +159,7 @@ const createModal = async (id) => {
     });
     modalCommentList.innerHTML = '';
     createComments();
+    createCommentsNumber(commentTitle, id);
     nameInput.value = '';
     commentInput.value = '';
   });
