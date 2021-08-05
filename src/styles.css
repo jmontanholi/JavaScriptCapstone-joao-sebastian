@@ -4,13 +4,56 @@ html {
   margin: 0;
 }
 
-body {
+.body {
   font-family: 'Comic Neue', cursive;
+  font-weight: bold;
   overflow-x: hidden;
+  background-color: #DECDF5;
+}
+
+.card {
+  background-color: rgba(241, 241, 241, 0.863)!important;
+  box-shadow: 5px 5px 10px #666;
+}
+
+.card-title {
+  font-weight: bold!important;
 }
 
 .roboto-font {
   font-family: 'Roboto Slab', serif;
+}
+
+
+.bg-nav-footer{
+  background-color: #322D4E;
+  width: 100%;
+}
+
+.nav-footer-color {
+  color: #EFF6E0!important;
+}
+
+.navbar {
+  box-shadow: 0 0 5px black;
+  position: fixed!important;
+  z-index: 1;
+  top: 0;
+}
+
+.commentBtn {
+  background-color: #322D4E;
+  color: #EFF6E0;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1000px;
+}
+
+.commentBtn:hover {
+ background-color: #725AC1;
+ color: #EFF6E0;
+ cursor: pointer;
 }
 
 .my-modal-none {
@@ -136,8 +179,8 @@ body {
   background-color: white;
 }
 
-.bg-gray {
-  background-color: #d8d7d7;
+.homepageList {
+  width: 100%;
 }
 
 .link {
@@ -146,13 +189,13 @@ body {
 }
 
 .link:hover {
-  color: purple;
+  color: #20ffa6!important;
 }
 
 .footer {
   width: 100%;
-  height: 55px;
   font-size: 15px;
+  padding: 5px 0 5px 0;
 }
 
 .ul {
@@ -162,9 +205,38 @@ body {
 }
 
 .creator-name {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .creator-div {
-  flex: 0.4;
+  flex: 0.2;
+}
+
+.social-icons {
+  font-size: 25px;
+}
+
+.linkedin:hover {
+  color: #04669A!important;
+}
+
+.twitter:hover {
+  color: #1DA1F2!important;
+}
+
+.github:hover {
+  color: rgb(26, 26, 26)!important;
+}
+
+.like-icon {
+  color: rgb(26, 26, 26);
+}
+
+.like-icon-clicked {
+  color: #725AC1;
+}
+
+.like-icon:hover {
+  color: #725AC1;
+  cursor: pointer;
 }

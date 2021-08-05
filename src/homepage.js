@@ -31,7 +31,7 @@ const addLikes = async () => {
       });
       const newLikesP = document.getElementById(e.id);
       getLikes(e.id).then((likesCount) => {
-        newLikesP.innerHTML = `${likesCount} likes <a class="likeBtn" id="${e.id}"><i class="far fa-thumbs-up"></i></a>`;
+        newLikesP.innerHTML = `${likesCount} likes <a class="likeBtn" id="${e.id}"><i class="far fa-grin-hearts fs-4 like-icon-clicked"></i></a>`;
       });
     });
   });
@@ -49,7 +49,7 @@ const populateList = async () => {
     listImg.classList.add('card-img-top', 'pt-2');
     listDiv.appendChild(listImg);
     const listInnerDiv = document.createElement('div');
-    listInnerDiv.classList.add('card-body');
+    listInnerDiv.classList.add('card-body', 'mb-3');
     listDiv.appendChild(listInnerDiv);
     const listH5 = document.createElement('h5');
     listH5.classList.add('card-title');
@@ -59,12 +59,12 @@ const populateList = async () => {
     listP.setAttribute('id', itemList[i].idMeal);
     // eslint-disable-next-line no-await-in-loop
     await getLikes(itemList[i].idMeal).then((likesCount) => {
-      listP.innerHTML = `${likesCount} likes <a class="likeBtn" id="${itemList[i].idMeal}"><i class="far fa-thumbs-up"></i></a>`;
+      listP.innerHTML = `${likesCount} likes <a class="likeBtn" id="${itemList[i].idMeal}"><i class="far fa-grin-hearts fs-4 like-icon"></i></a>`;
     });
     listP.classList.add('card-text');
     listInnerDiv.appendChild(listP);
     const listBtn = document.createElement('a');
-    listBtn.classList.add('btn', 'btn-secondary', 'commentBtn');
+    listBtn.classList.add('commentBtn');
     listBtn.setAttribute('id', itemList[i].idMeal);
     listBtn.innerText = 'Comment';
     listInnerDiv.appendChild(listBtn);
