@@ -1,60 +1,70 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# JavaScript Capstone - JS Meals
 
-> One paragraph statement about the project.
+> This is a website for showing dishes and interacting with them.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./website.png)
 
-Additional description about the project and its features.
+In this website we are interacting with two different APIs not only to show the meals but also to let users like them and/or comment about them.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- HTML&CSS
+- Bootstrap
+- Webpack
+- Git & Github
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://jmontanholi.github.io/JavaScriptCapstone-joao-sebastian/)
 
+## Project Video Presentation
+
+You can check out our video presentation for the project [here](https://www.loom.com/share/0e96cd8331524739814b55528504a1aa)
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- Github account
+- Browser
+- Commandline
 ### Setup
 
+First you need to clone this repository locally following these steps:
+- Choose a place where you would want to create the repository
+- Navigate there with your commandline
+- Use this command in the commandline ```git clone git@github.com:jmontanholi/JavaScriptCapstone-joao-sebastian.git```
 ### Install
 
+For installation you will need to:
+- open your terminal
+- go to your recently cloned repository
+- Use the following command to install everything you need ```npm install```
 ### Usage
 
+To use the project locally you just need to run this command ```npm run start```
 ### Run tests
 
-### Deployment
-
-
+To run the tests you just need to run this command ```npm test```
 
 ## Authors
 
-👤 **Author1**
+👤 **João Vítor Montanholi Nunes**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [jmontanholi](https://github.com/jmontanholi)
+- Twitter: [MontanholiNunes](https://twitter.com/MontanholiNunes)
+- LinkedIn: [Joao vitor montanholi](https://www.linkedin.com/in/joaovitormontanholi/)
 
-👤 **Author2**
+👤 **Sebastian Muñoz**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
+- GitHub: [@smunozmo](https://github.com/smunozmo)
+- Twitter: [@smunozmo](https://twitter.com/smunozmo)
+- Linkedin: [Sebastián Muñoz](https://www.linkedin.com/in/smunozmo/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -67,9 +77,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Thunder Client VSC extension.
+- Microverse.
 
 ## 📝 License
 
