@@ -15,35 +15,34 @@ html {
 .body {
   font-family: 'Comic Neue', cursive;
   font-weight: bold;
-  background-color: lightblue;;
+  background-color: lightblue;
 }
 
 .card {
-  background-color: rgba(241, 241, 241, 0.863)!important;
+  background-color: rgba(241, 241, 241, 0.863) !important;
   box-shadow: 5px 5px 10px #666;
 }
 
 .card-title {
-  font-weight: bold!important;
+  font-weight: bold !important;
 }
 
 .roboto-font {
   font-family: 'Roboto Slab', serif;
 }
 
-
-.bg-nav-footer{
-  background-color: #322D4E;
+.bg-nav-footer {
+  background-color: #322d4e;
   width: 100%;
 }
 
 .nav-footer-color {
-  color: #EFF6E0!important;
+  color: #eff6e0 !important;
 }
 
 .navbar {
   box-shadow: 0 0 5px black;
-  position: fixed!important;
+  position: fixed !important;
   z-index: 1;
   top: 0;
 }
@@ -53,8 +52,8 @@ html {
 }
 
 .commentBtn {
-  background-color: #322D4E;
-  color: #EFF6E0;
+  background-color: #322d4e;
+  color: #eff6e0;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
@@ -64,9 +63,9 @@ html {
 }
 
 .commentBtn:hover {
- background-color: #725AC1;
- color: #EFF6E0;
- cursor: pointer;
+  background-color: #725AC1;
+  color: #EFF6E0;
+  cursor: pointer;
 }
 
 .commentBtn:active {
@@ -92,7 +91,7 @@ html {
 .my-modal-content {
   width: 50%;
   height: 80vh;
-  background-color: #322D4E;
+  background-color: #322d4e;
   margin: 100px auto;
   position: relative;
   border-radius: 5px;
@@ -101,30 +100,26 @@ html {
   animation: slideUpLarge 1.5s ease-out forwards;
 }
 
-/* from {background-color: #725AC1} to 
-  { background-color: #322D4E} */
-
 @keyframes slideUpLarge {
-  
   0% {
     transform:translateY(100%);
     transform:scale(0.3);
     opacity:0;
-    background-color: #725AC1;
+    background-color: #725ac1;
   }
 
   20% {
-    transform:translateY(0%);
+    transform:translateY(0);
     transform:scale(1);
     opacity: 1;
   }
 
   70% {
-    background-color: #4A5899;
+    background-color: #4a5899;
   }
 
   100% {
-    background-color: #322D4E;
+    background-color: #322d4e;
   }
 }
 
@@ -144,15 +139,15 @@ html {
 
 .food-title {
   margin-top: 25px;
-  color: #EFF6E0;
+  color: #eff6e0;
 }
 
 .ingredients-title {
-  color: #EFF6E0;
+  color: #eff6e0;
 }
 
 .comments-title {
-  color: #EFF6E0;
+  color: #eff6e0;
 }
 
 .closeBtn {
@@ -160,7 +155,7 @@ html {
   font-size: 25px;
   top: 15px;
   right: 20px;
-  color: #EFF6E0;
+  color: #eff6e0;
   cursor: pointer;
 }
 
@@ -236,14 +231,14 @@ html {
 
 .submit-btn:hover {
   background-color: white;
-  border: 1px solid #725AC1;
-  color: #725AC1;
+  border: 1px solid #725ac1;
+  color: #725ac1;
 }
 
 .submit-btn:focus {
   background-color: lightgray;
-  border: 1px solid #725AC1;
-  color: #725AC1;
+  border: 1px solid #725ac1;
+  color: #725ac1;
   box-shadow: inset 2px 2px 2px black;
 
 }
@@ -258,7 +253,7 @@ html {
 }
 
 .link:hover {
-  color: rgb(143, 227, 255)!important;
+  color: rgb(143, 227, 255) !important;
 }
 
 .footer {
@@ -288,15 +283,15 @@ html {
 }
 
 .linkedin:hover {
-  color: #04669A!important;
+  color: #04669A !important;
 }
 
 .twitter:hover {
-  color: #1DA1F2!important;
+  color: #1DA1F2 !important;
 }
 
 .github:hover {
-  color: rgb(26, 26, 26)!important;
+  color: rgb(26, 26, 26) !important;
 }
 
 .like-icon {

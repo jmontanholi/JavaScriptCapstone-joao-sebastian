@@ -81,7 +81,6 @@
 }
 
 @media (max-width: 650px) {
-
   .modal-img {
     width: 250px;
     height: 250px;
@@ -93,7 +92,6 @@
 }
 
 @media (max-width: 420px) {
-
   .my-modal-content {
     width: 100%;
   }
