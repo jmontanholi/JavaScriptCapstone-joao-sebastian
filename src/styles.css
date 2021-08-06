@@ -63,8 +63,8 @@ html {
 }
 
 .commentBtn:hover {
-  background-color: #725AC1;
-  color: #EFF6E0;
+  background-color: #725ac1;
+  color: #eff6e0;
   cursor: pointer;
 }
 
@@ -102,15 +102,15 @@ html {
 
 @keyframes slideUpLarge {
   0% {
-    transform:translateY(100%);
-    transform:scale(0.3);
-    opacity:0;
+    transform: translateY(100%);
+    transform: scale(0.3);
+    opacity: 0;
     background-color: #725ac1;
   }
 
   20% {
-    transform:translateY(0);
-    transform:scale(1);
+    transform: translateY(0);
+    transform: scale(1);
     opacity: 1;
   }
 
@@ -134,7 +134,7 @@ html {
   max-height: 400px;
   margin-top: 15px;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 1px rgba(241, 241, 241, 0.863);
+  box-shadow: 0 0 5px 1px rgba(241, 241, 241, 0.863);
 }
 
 .food-title {
@@ -240,7 +240,6 @@ html {
   border: 1px solid #725ac1;
   color: #725ac1;
   box-shadow: inset 2px 2px 2px black;
-
 }
 
 .homepageList {
@@ -283,11 +282,11 @@ html {
 }
 
 .linkedin:hover {
-  color: #04669A !important;
+  color: #04669a !important;
 }
 
 .twitter:hover {
-  color: #1DA1F2 !important;
+  color: #1da1f2 !important;
 }
 
 .github:hover {
@@ -299,11 +298,11 @@ html {
 }
 
 .like-icon-clicked {
-  color: #725AC1;
+  color: #725ac1;
 }
 
 .like-icon:hover {
-  color: #725AC1;
+  color: #725ac1;
   cursor: pointer;
   transform: scale(1.2);
 }
