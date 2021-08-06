@@ -48,6 +48,10 @@ html {
   top: 0;
 }
 
+.navCategories {
+  font-size: 25px;
+}
+
 .commentBtn {
   background-color: #322D4E;
   color: #EFF6E0;
