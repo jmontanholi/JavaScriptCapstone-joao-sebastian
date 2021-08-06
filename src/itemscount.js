@@ -1,11 +1,8 @@
-const displayCount = async (count) => {
-  const navLink = document.getElementById('navLink');
-
+const displayCount = async (element, count) => {
   if (count === null || count === undefined) {
-    navLink.innerText = 'No recipes available)';
-    return 0;
+    element.innerText = `${element.id} 0`;
   }
-  navLink.innerText = `All recipes (${count})`;
+  element.innerText = `${element.id} ${count}`;
   return count;
 };
 

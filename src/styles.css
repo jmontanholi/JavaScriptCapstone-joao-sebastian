@@ -1,16 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Roboto:wght@700&display=swap');
 
 html {
   margin: 0;
 }
 
-body {
+.transition-all {
+  transition: all 1s;
+}
+
+.no-overflow {
+  overflow: hidden;
+}
+
+.body {
   font-family: 'Comic Neue', cursive;
-  overflow-x: hidden;
+  font-weight: bold;
+  background-color: lightblue;
+}
+
+.card {
+  background-color: rgba(241, 241, 241, 0.863) !important;
+  box-shadow: 5px 5px 10px #666;
+}
+
+.card-title {
+  font-weight: bold !important;
 }
 
 .roboto-font {
   font-family: 'Roboto Slab', serif;
+}
+
+.bg-nav-footer {
+  background-color: #322d4e;
+  width: 100%;
+}
+
+.nav-footer-color {
+  color: #eff6e0 !important;
+}
+
+.navbar {
+  box-shadow: 0 0 5px black;
+  position: fixed !important;
+  z-index: 1;
+  top: 0;
+}
+
+.navCategories {
+  font-size: 25px;
+}
+
+.commentBtn {
+  background-color: #322d4e;
+  color: #eff6e0;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  box-shadow: 3px 4px 4px grey;
+  transition: all 0.7s;
+}
+
+.commentBtn:hover {
+  background-color: #725ac1;
+  color: #eff6e0;
+  cursor: pointer;
+}
+
+.commentBtn:active {
+  background-color: #54428f;
+  box-shadow: inset 2px 2px 2px black;
 }
 
 .my-modal-none {
@@ -31,12 +91,36 @@ body {
 .my-modal-content {
   width: 50%;
   height: 80vh;
-  background-color: #fff;
+  background-color: #322d4e;
   margin: 100px auto;
   position: relative;
   border-radius: 5px;
   box-shadow: rgb(88, 88, 88) 5px 5px 100px;
   overflow: auto;
+  animation: slideUpLarge 1.5s ease-out forwards;
+}
+
+@keyframes slideUpLarge {
+  0% {
+    transform: translateY(100%);
+    transform: scale(0.3);
+    opacity: 0;
+    background-color: #725ac1;
+  }
+
+  20% {
+    transform: translateY(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    background-color: #4a5899;
+  }
+
+  100% {
+    background-color: #322d4e;
+  }
 }
 
 .modal-img-div {
@@ -46,15 +130,24 @@ body {
 }
 
 .modal-img {
-  width: 400px;
-  height: 400px;
+  max-width: 400px;
+  max-height: 400px;
   margin-top: 15px;
   border-radius: 10px;
-  box-shadow: 1px 1px 5px;
+  box-shadow: 0 0 5px 1px rgba(241, 241, 241, 0.863);
 }
 
 .food-title {
   margin-top: 25px;
+  color: #eff6e0;
+}
+
+.ingredients-title {
+  color: #eff6e0;
+}
+
+.comments-title {
+  color: #eff6e0;
 }
 
 .closeBtn {
@@ -62,6 +155,8 @@ body {
   font-size: 25px;
   top: 15px;
   right: 20px;
+  color: #eff6e0;
+  cursor: pointer;
 }
 
 .modal-details {
@@ -79,7 +174,7 @@ body {
 .modal-ingredients {
   max-height: 150px;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.07);
+  background-color: rgba(241, 241, 241, 1);
   border-radius: 5px;
 }
 
@@ -97,7 +192,7 @@ body {
 .modal-comment-list {
   max-height: 150px;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.07);
+  background-color: rgba(241, 241, 241, 1);
   border-radius: 5px;
 }
 
@@ -109,7 +204,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: auto;
+  margin: 25px auto auto auto;
 }
 
 .comment-input {
@@ -126,18 +221,29 @@ body {
 
 .submit-btn {
   width: 25%;
+  font-weight: bold;
   margin: 15px auto 20px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.699);
-  background-color: rgba(0, 0, 0, 0.144);
+  box-shadow: 3px 5px 4px black;
+  background-color: rgba(241, 241, 241, 1);
 }
 
 .submit-btn:hover {
   background-color: white;
+  border: 1px solid #725ac1;
+  color: #725ac1;
 }
 
-.bg-gray {
-  background-color: #d8d7d7;
+.submit-btn:focus {
+  background-color: lightgray;
+  border: 1px solid #725ac1;
+  color: #725ac1;
+  box-shadow: inset 2px 2px 2px black;
+}
+
+.homepageList {
+  width: 100%;
 }
 
 .link {
@@ -146,13 +252,15 @@ body {
 }
 
 .link:hover {
-  color: purple;
+  color: rgb(143, 227, 255) !important;
 }
 
 .footer {
+  position: relative;
+  bottom: 0;
   width: 100%;
-  height: 55px;
   font-size: 15px;
+  padding: 5px 0 5px 0;
 }
 
 .ul {
@@ -162,9 +270,53 @@ body {
 }
 
 .creator-name {
-  font-size: 17px;
+  font-size: 30px;
 }
 
 .creator-div {
-  flex: 0.4;
+  flex: 0.2;
+}
+
+.social-icons {
+  font-size: 25px;
+}
+
+.linkedin:hover {
+  color: #04669a !important;
+}
+
+.twitter:hover {
+  color: #1da1f2 !important;
+}
+
+.github:hover {
+  color: rgb(26, 26, 26) !important;
+}
+
+.like-icon {
+  color: rgb(26, 26, 26);
+}
+
+.like-icon-clicked {
+  color: #725ac1;
+}
+
+.like-icon:hover {
+  color: #725ac1;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.creation {
+  animation: creationAnimation 2.5s ease-out;
+}
+
+@keyframes creationAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
