@@ -51,12 +51,19 @@ html {
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 5px;
+  box-shadow: 3px 4px 4px grey;
+  transition: all 0.7s;
 }
 
 .commentBtn:hover {
  background-color: #725AC1;
  color: #EFF6E0;
  cursor: pointer;
+}
+
+.commentBtn:active {
+  background-color: #54428f;
+  box-shadow: inset 2px 2px 2px black;
 }
 
 .my-modal-none {
@@ -83,6 +90,34 @@ html {
   border-radius: 5px;
   box-shadow: rgb(88, 88, 88) 5px 5px 100px;
   overflow: auto;
+  animation: slideUpLarge 1.5s ease-out forwards;
+}
+
+/* from {background-color: #725AC1} to 
+  { background-color: #322D4E} */
+
+@keyframes slideUpLarge {
+  
+  0% {
+    transform:translateY(100%);
+    transform:scale(0.3);
+    opacity:0;
+    background-color: #725AC1;
+  }
+
+  20% {
+    transform:translateY(0%);
+    transform:scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    background-color: #4A5899;
+  }
+
+  100% {
+    background-color: #322D4E;
+  }
 }
 
 .modal-img-div {
