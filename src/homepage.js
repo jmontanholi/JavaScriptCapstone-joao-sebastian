@@ -1,6 +1,7 @@
 import createList from './homePageRequest.js';
 import displayCount from './itemscount.js';
 
+const footer = document.getElementById('footer');
 const listContainer = document.getElementById('homepageList');
 const APIUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/J8Ya3HGGvBBaT8zGxBGx/likes';
 let itemsCount = '';
@@ -42,7 +43,7 @@ const populateList = async () => {
   itemsCount = itemList.length;
   for (let i = 0; i < itemList.length; i += 1) {
     const listDiv = document.createElement('div');
-    listDiv.classList.add('card', 'col-sm-3');
+    listDiv.classList.add('card', 'col-sm-3', 'creation');
     listContainer.appendChild(listDiv);
     const listImg = document.createElement('img');
     listImg.setAttribute('src', itemList[i].strMealThumb);
@@ -59,7 +60,7 @@ const populateList = async () => {
     listP.setAttribute('id', itemList[i].idMeal);
     // eslint-disable-next-line no-await-in-loop
     await getLikes(itemList[i].idMeal).then((likesCount) => {
-      listP.innerHTML = `${likesCount} likes <a class="likeBtn" id="${itemList[i].idMeal}"><i class="far fa-grin-hearts fs-4 like-icon"></i></a>`;
+      listP.innerHTML = `${likesCount} likes <a class="likeBtn" id="${itemList[i].idMeal}"><i class="far fa-grin-hearts fs-4 like-icon transition-all"></i></a>`;
     });
     listP.classList.add('card-text');
     listInnerDiv.appendChild(listP);
@@ -69,6 +70,8 @@ const populateList = async () => {
     listBtn.innerText = 'Comment';
     listInnerDiv.appendChild(listBtn);
   }
+  footer.classList.remove('d-none');
+  footer.classList.add('d-md-flex');
   addLikes();
   displayCount(itemsCount);
 };

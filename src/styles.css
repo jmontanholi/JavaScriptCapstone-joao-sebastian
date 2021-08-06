@@ -4,6 +4,10 @@ html {
   margin: 0;
 }
 
+.transition-all {
+  transition: all 1s;
+}
+
 .no-overflow {
   overflow: hidden;
 }
@@ -254,6 +258,8 @@ html {
 }
 
 .footer {
+  position: relative;
+  bottom: 0;
   width: 100%;
   font-size: 15px;
   padding: 5px 0 5px 0;
@@ -266,7 +272,7 @@ html {
 }
 
 .creator-name {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .creator-div {
@@ -300,4 +306,19 @@ html {
 .like-icon:hover {
   color: #725AC1;
   cursor: pointer;
+  transform: scale(1.2);
+}
+
+.creation {
+  animation: creationAnimation 2.5s ease-out;
+}
+
+@keyframes creationAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
